@@ -2,9 +2,11 @@ const express =require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const User=require('./models/User');
-const db="mongodb+srv://astrolabs:makeithappen@cluster0-btlpa.mongodb.net/test?retryWrites=true&w=majority"
+const keys=require("./config/keys")
+
+const db=keys.mongoURI;
 mongoose
-.connect(db,{})
+.connect(db,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=>console.log("DB CONNECTED"))
 .catch(err=>console.log(err));
 
