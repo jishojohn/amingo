@@ -2,7 +2,7 @@ const express =require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const User=require('./models/User');
-const keys=require("./config/keys")
+const keys=require("./config/keys");
 
 const db=keys.mongoURI;
 mongoose
