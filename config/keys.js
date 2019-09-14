@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV ==='PRODUCTION')
+if(process.env.NODE_ENV ==='production')
 {
     console.log("Env is production");
     module.exports=require('./keys_prod');
